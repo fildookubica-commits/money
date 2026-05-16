@@ -1,0 +1,14 @@
+{
+  "name": "budget-app",
+  "version": "1.0.0",
+  "description": "Osobný rozpočet — Cloudflare Pages + D1",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:init": "wrangler d1 execute budget-db --file=schema.sql --remote",
+    "db:init-local": "wrangler d1 execute budget-db --file=schema.sql --local"
+  },
+  "devDependencies": {
+    "wrangler": "^3.90.0"
+  }
+}

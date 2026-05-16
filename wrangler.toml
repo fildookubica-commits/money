@@ -1,0 +1,17 @@
+# Cloudflare konfigurácia
+# Po vytvorení D1 databázy v CF dashboarde nahraď DATABASE_ID_SEM tvojím skutočným ID
+
+name = "budget-app"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+# D1 databáza
+[[d1_databases]]
+binding = "DB"
+database_name = "budget-db"
+database_id = "DATABASE_ID_SEM"
+
+# Heslo pre prihlásenie (zmeň si!)
+# Lepšie cez `wrangler secret put APP_PASSWORD`
+[vars]
+APP_PASSWORD = "zmenma_silne_heslo_123"
